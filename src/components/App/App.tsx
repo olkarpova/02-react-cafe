@@ -4,8 +4,8 @@ import css from './App.module.css';
 
 import CafeInfo from '../CafeInfo/CafeInfo';
 import VoteOptions from '../VoteOptions/VoteOptions';
-import VoteStats from '../VoteStats/VoteStats';
 import Notification from '../Notification/Notification';
+import VoteStats from '../VoteStats/VoteStats';
 
 export default function App() {
   const [votes, setVotes] = useState<Votes>({good: 0, neutral: 0, bad: 0});
