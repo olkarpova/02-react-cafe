@@ -11,9 +11,12 @@ import VoteStats from '../VoteStats/VoteStats';
 export default function App() {
   const [votes, setVotes] = useState<Votes>({good: 0, neutral: 0, bad: 0});
 
-  const handleVote = (voteName: VoteType) => {
-    setVotes({ ...votes, [voteName]: votes[voteName] + 1 });
+  const handleVote = (type: VoteType) => {
+  // const handleVote = (voteName: VoteType) => {
+    // setVotes({ ...votes, [voteName]: votes[voteName] + 1 });
+    setVotes(prev => ({ ...prev, [type]: prev[type] + 1 }));
   }
+
   const resetVotes = () => {
     setVotes({good: 0, neutral: 0, bad: 0});
   };
